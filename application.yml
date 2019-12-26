@@ -4,6 +4,8 @@ spring:
 ---
 spring:
   profiles: dev
+  application: 
+    name: dt-platform-config-dev
   cloud:
     bootstrap:
       enabled: false
@@ -14,6 +16,8 @@ spring:
 ---
 spring:
   profiles: test
+  application:
+    name: dt-platform-config-test
   cloud:
     bootstrap:
       enabled: false
@@ -24,6 +28,8 @@ spring:
 ---
 spring:
   profiles: prod
+  application:
+    name: dt-platform-config-prod
   cloud:
     bootstrap:
       enabled: false
