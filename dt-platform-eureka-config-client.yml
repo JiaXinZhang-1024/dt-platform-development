@@ -27,7 +27,7 @@ eureka:
 ---
  
 spring:
-  profile: dev
+  profile: test
   application:
     name: eurka-server-config-client
 server:
