@@ -1,5 +1,5 @@
 spring: 
-  profiles: dev #开发环境
+  profile: dev
   application: 
     name: dt-platform-user-customer
 server: 
@@ -12,13 +12,16 @@ feign:
 eureka: 
   client: 
     service-url: 
+      register-with-eureka: false
       #defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka,http://eurka03.com:8765/eureka     #集群配置
-      defaultZone: http://eurka01.com:7001/eureka
-    register-with-eureka: false
+      defaultZone: http://eurka01.com:7001/eureka,http://eurka02.com:7002/eureka,http://eurka03.com:7003/eureka
+     
+
+    
 
 ---
 spring: 
-  profiles: test #开发环境
+  profile: test
   application: 
     name: dt-platform-user-customer
 server: 
@@ -31,6 +34,8 @@ feign:
 eureka: 
   client: 
     service-url: 
+      register-with-eureka: false
       #defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka,http://eurka03.com:8765/eureka     #集群配置
       defaultZone: http://eurka01.com:7001/eureka,http://eurka02.com:7002/eureka,http://eurka03.com:7003/eureka
-      register-with-eureka: false
+     
+
