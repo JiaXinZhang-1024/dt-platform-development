@@ -1,0 +1,58 @@
+spring:
+  profile: dev
+  application:
+    name: eurka-server-config-client
+server:
+  port: 7001
+eureka:
+  instance: 
+     #hostname: localhost #eureka服务端的实例名称   单机模式   配置集群时  要用下方   ## 集群配置举例
+     hostname: eurka01.com 
+     instance-id: eurka-service  #集群配置 这里要不同
+     prefer-ip-address: true   # 访问路径可以ip 显示
+  client:
+    register-with-eureka: true #false表示不向注册中心注册自己#集群时 要设置为true  
+    fetch-registry: true #false 表示自己就是注册中心，职责就是维护服务实例，并不需要去检索服务#集群时 要设置为true
+    service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #设置与eureka server 交互的地址查询服务和注册服务都需要依赖的地址单机版胚子   
+      #defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka   #集群配置举例
+      #解决方式有三种：
+      #关闭自我保护模式（eureka.server.enable-self-preservation设为false），不推荐。
+      #降低renewalPercentThreshold的比例（eureka.server.renewal-percent-threshold设置为0.5以下，比如0.49），不推荐。
+      #部署多个 Eureka Server 并开启其客户端行为（eureka.client.register-with-eureka不要设为false，默认为true），推荐。
+      defaultZone: http://eurka02.com:7002/eureka,http://eurka03.com:7003/eureka
+      #defaultZone: http://eurka01.com:7001/eureka
+      
+      
+---
+ 
+spring:
+  profile: dev
+  application:
+    name: eurka-server-config-client
+server:
+  port: 7001
+eureka:
+  instance: 
+     #hostname: localhost #eureka服务端的实例名称   单机模式   配置集群时  要用下方   ## 集群配置举例
+     hostname: eurka01.com 
+     instance-id: eurka-service  #集群配置 这里要不同
+     prefer-ip-address: true   # 访问路径可以ip 显示
+  client:
+    register-with-eureka: true #false表示不向注册中心注册自己#集群时 要设置为true  
+    fetch-registry: true #false 表示自己就是注册中心，职责就是维护服务实例，并不需要去检索服务#集群时 要设置为true
+    service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #设置与eureka server 交互的地址查询服务和注册服务都需要依赖的地址单机版胚子   
+      #defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka   #集群配置举例
+      #解决方式有三种：
+      #关闭自我保护模式（eureka.server.enable-self-preservation设为false），不推荐。
+      #降低renewalPercentThreshold的比例（eureka.server.renewal-percent-threshold设置为0.5以下，比如0.49），不推荐。
+      #部署多个 Eureka Server 并开启其客户端行为（eureka.client.register-with-eureka不要设为false，默认为true），推荐。
+      defaultZone: http://eurka02.com:7002/eureka,http://eurka03.com:7003/eureka
+      #defaultZone: http://eurka01.com:7001/eureka
+info:   #追加微服务 信息 
+  app.name: eurka-server
+  company.name: www.zjx.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$      
+  
