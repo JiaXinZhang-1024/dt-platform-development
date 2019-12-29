@@ -1,4 +1,12 @@
 spring:
+  profile: 
+   active: 
+     -dev
+
+---
+server: 
+    port: 9001
+spring:
   profile: dev
   application:
     name: user-service  # 集群时候不需要改这儿名字 只有Eureka需要改变
@@ -25,8 +33,6 @@ spring:
       maxPoolPreparedStatementPerConnectionSize: 20
       userGlobalDataSourceStat: true
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500    
-server:
-    port: 9001
 
 
 #Mybatis配置
