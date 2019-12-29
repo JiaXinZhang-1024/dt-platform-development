@@ -1,7 +1,7 @@
 spring:
   profile: dev
   application:
-    name: eurka-server-config-client
+    name: eurka-server
 server:
   port: 7001
 eureka:
