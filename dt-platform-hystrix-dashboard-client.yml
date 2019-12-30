@@ -13,7 +13,7 @@ spring:
   application:
     name: dt-platform-hystrix-dashboard
 server: 
-  port: 6001
+  port: 5001
   
 ---
 
@@ -22,4 +22,4 @@ spring:
   application:
     name: dt-platform-hystrix-dashboard
 server: 
-  port: 6001
+  port: 5001
