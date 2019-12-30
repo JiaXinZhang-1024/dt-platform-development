@@ -1,4 +1,12 @@
 spring:
+  profile: 
+   active: 
+     -dev
+
+---
+
+
+spring:
   profiles: dev #开发环境
   application:
     name: dt-platform-gateway
