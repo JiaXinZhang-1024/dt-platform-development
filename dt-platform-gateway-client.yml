@@ -34,7 +34,16 @@ zuul:
      mydept.path: /myUser/**   #入口名字   path:    多个用逗号分隔 
      
 
-
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: secret
+      access-token-uri: http://localhost:3001/oauth/token
+      user-authorization-uri: http://localhost:3001/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:3001/oauth/check_token
+      
 info:
   app.name: springcloud-study-zuul-gateway
   company.name: www.zjx.com
@@ -71,7 +80,16 @@ zuul:
      mydept.serviceId: user-service   #  微服务名字  多个用逗号分隔 
      mydept.path: /myUser/**   #入口名字   path:    多个用逗号分隔 
      
-
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: secret
+      access-token-uri: http://localhost:3001/oauth/token
+      user-authorization-uri: http://localhost:3001/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:3001/oauth/check_token
+      
 
 info:
   app.name: springcloud-study-zuul-gateway
