@@ -28,6 +28,7 @@ eureka:
       ##defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka,http://eurka03.com:8765/eureka      ## 集群配置举例
       defaultZone: http://eurka01.com:7001/eureka,http://eurka02.com:7002/eureka,http://eurka03.com:7003/eureka      ## 集群配置
 zuul: 
+   sensitiveHeaders: 
    #公共前缀
    prefix: /dtCloud  # 设置统一访问前缀
    ignored-services: user-service   # "*" 禁用所有微服务名字
@@ -36,7 +37,15 @@ zuul:
      mydept.path: /myUser/**   #入口名字   path:    多个用逗号分隔 
      
 
-
+security:
+  oauth2:
+    client:
+      client-id: client
+     client-secret: secret
+     access-token-uri: http://localhost:3001/oauth/token
+      user-authorization-uri: http://localhost:3001/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:3001/oauth/check_token
 
       
 info:
@@ -68,6 +77,7 @@ eureka:
       ##defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka,http://eurka03.com:8765/eureka      ## 集群配置举例
       defaultZone: http://eurka01.com:7001/eureka,http://eurka02.com:7002/eureka,http://eurka03.com:7003/eureka      ## 集群配置
 zuul: 
+   sensitiveHeaders: 
    #公共前缀
    prefix: /dtCloud  # 设置统一访问前缀
    ignored-services: user-service   # "*" 禁用所有微服务名字
@@ -75,7 +85,15 @@ zuul:
      mydept.serviceId: user-service   #  微服务名字  多个用逗号分隔 
      mydept.path: /myUser/**   #入口名字   path:    多个用逗号分隔 
       
-
+security:
+  oauth2:
+    client:
+      client-id: client
+     client-secret: secret
+     access-token-uri: http://localhost:3001/oauth/token
+      user-authorization-uri: http://localhost:3001/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:3001/oauth/check_token
 info:
   app.name: springcloud-study-zuul-gateway
   company.name: www.zjx.com
