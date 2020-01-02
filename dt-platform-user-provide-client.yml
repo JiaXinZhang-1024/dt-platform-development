@@ -35,6 +35,18 @@ spring:
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500    
 
 
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: secret
+      access-token-uri: http://localhost:3001/oauth/token
+      user-authorization-uri: http://localhost:3001/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:3001/oauth/check_token
+      
+      
+      
 #Mybatis配置
 mybatis: 
   mapper-locations: classpath:mapper/*.xml
