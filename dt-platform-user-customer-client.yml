@@ -22,6 +22,8 @@ feign:
             strategy: SEMAPHORE  #加上这个就可以获取到HttpServletRequest
             thread:
               timeoutInMilliseconds: 10000
+    okhttp:
+      enabled: true
 eureka:
   client:
     service-url:
