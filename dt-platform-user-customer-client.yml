@@ -27,12 +27,11 @@ security:
     client: 
      client-id: client
      client-secret: secret
-     access-token-uri: http://localhost:3001/auth2/oauth/token
-     user-authorization-uri: http://localhost:3001/auth2/oauth/authorize
+     access-token-uri: http://localhost:3001/oauth/token
+     user-authorization-uri: http://localhost:3001/oauth/authorize
     resource: 
-      user-info-uri: http://localhost:3001/auth2/user
-      prefer-token-info: false
-      token-info-uri: http://localhost:3001/auth2/oauth/check_token
+      prefer-token-info: true
+      token-info-uri: http://localhost:3001/oauth/check_token
 
 eureka:
   instance:

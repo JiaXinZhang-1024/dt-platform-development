@@ -47,8 +47,7 @@ security:
   oauth2: 
     resource: 
       id: user-service
-      user-info-uri: http://localhost:3001/user
-      prefer-token-info: false
+      prefer-token-info: true
       token-info-uri: http://localhost:3001/oauth/check_token
 eureka: 
   instance:
