@@ -48,12 +48,15 @@ zuul:
        routes: #设置微服务访问入口
           user:
               serviceId: user-service   #  微服务名字  多个用逗号分隔 
+              sensitiveHeaders: 
               path: /myUser/**   #入口名字   path:    多个用逗号分隔 
           user-customer:  
               serviceId:  user-customer   #  微服务名字  多个用逗号分隔 
+              sensitiveHeaders: 
               path: /user-customer/**   #入口名字   path:    多个用逗号分隔 
           auth2-service: 
-              erviceId: auth2-service   #  微服务名字  多个用逗号分隔 
+              erviceId: oAuth2   #  微服务名字  多个用逗号分隔 
+              sensitiveHeaders: 
               path: /auth2/**   #入口名字   path:    多个用逗号分隔 
    add-proxy-headers: true
      
