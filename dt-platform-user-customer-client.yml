@@ -13,15 +13,25 @@ server:
 ### Feign 配置
 feign:
   # 开启断路器（熔断器）
-  hystrix:
+  hystrix: 
     enabled: true
-    command:
-      default:
-        execution:
-          isolation:
+    command: 
+      default: 
+        execution: 
+          isolation: 
             strategy: SEMAPHORE  #加上这个就可以获取到HttpServletRequest
-            thread:
+            thread: 
               timeoutInMilliseconds: 10000
+security:
+  oauth2:
+    client: 
+      client-id: client
+     client-secret: secret
+     access-token-uri: http://localhost:3001/oauth/token
+      user-authorization-uri: http://localhost:3001/oauth/authorize
+    resource: 
+      token-info-uri: http://localhost:3001/oauth/check_token
+
 eureka:
   client:
     service-url:
