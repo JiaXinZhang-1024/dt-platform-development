@@ -43,7 +43,16 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true #开启驼峰命名
     cache-enabled: true #开启二级缓存   
-
+security: 
+  oauth2: 
+    client: 
+     client-id: client
+     client-secret: secret
+     access-token-uri: http://localhost:6001/dtCloud/auth2/oauth/token
+     user-authorization-uri: http://localhost:6001/dtCloud/auth2/oauth/authorize
+    resource: 
+      user-info-uri: http://localhost:6001/dtCloud/auth2/user
+      token-info-uri: http://localhost:6001/dtCloud/auth2/oauth/check_token
 
 eureka: 
   instance:
