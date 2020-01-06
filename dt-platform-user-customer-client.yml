@@ -33,6 +33,7 @@ security:
       user-info-uri: http://localhost:6001/dtCloud/auth2/user
       prefer-token-info: false
       token-info-uri: http://localhost:6001/dtCloud/auth2/oauth/check_token
+      clientAuthenticationScheme: form
 
 eureka:
   instance:
