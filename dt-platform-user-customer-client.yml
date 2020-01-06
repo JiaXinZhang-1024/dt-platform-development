@@ -7,7 +7,7 @@ spring:
 spring: 
   profile: dev
   application: 
-    name: dt-platform-user-customer
+    name: user-customer
 server:
     port: 9004
 ### Feign 配置
