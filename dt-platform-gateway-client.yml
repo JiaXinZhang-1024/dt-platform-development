@@ -28,17 +28,6 @@ eureka:
       ##defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka,http://eurka03.com:8765/eureka      ## 集群配置举例
       defaultZone: http://eurka01.com:7001/eureka,http://eurka02.com:7002/eureka,http://eurka03.com:7003/eureka      ## 集群配置
       
-security:
-  oauth2:
-    client:
-      access-token-uri: http://localhost:3001/oauth/token
-      user-authorization-uri: http://localhost:3001/oauth/authorize
-      client-id: client
-      client-secret: secret
-    resource:
-      user-info-uri: http://localhost:3001/user
-      token-info-uri: http://localhost:3001/oauth/check_token
-      prefer-token-info: false
 zuul: 
    sensitiveHeaders: 
    #公共前缀
