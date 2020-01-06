@@ -46,7 +46,7 @@ mybatis:
 security: 
   oauth2: 
     client: 
-     client-id: client
+     client-id: clientUser
      client-secret: secret
      access-token-uri: http://localhost:6001/dtCloud/auth2/oauth/token
      user-authorization-uri: http://localhost:6001/dtCloud/auth2/oauth/authorize
