@@ -19,6 +19,7 @@ feign:
   
   # 开启断路器（熔断器）
 hystrix:
+  shareSecurityContext: true
   command:
     default:
       execution:
