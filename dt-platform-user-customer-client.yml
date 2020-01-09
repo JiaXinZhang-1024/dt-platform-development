@@ -13,7 +13,7 @@ server:
 ### Feign 配置
 feign:
   hystrix:
-        enabled : true 
+        enabled : false 
   httpclient:
         enabled: true
   
