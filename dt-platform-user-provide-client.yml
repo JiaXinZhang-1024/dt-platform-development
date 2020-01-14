@@ -13,7 +13,7 @@ spring:
   zipkin:
     #base-url: http://localhost:9411 
     discovery-client-enabled: true
-    base-url: http://zipkinserver.com:2001
+    base-url: http://zipkinserver.com:2001/
   datasource: 
     url: jdbc:mysql://bj-cdb-d7rai9r6.sql.tencentcdb.com:62502/dt-platform-user?characterEncoding=utf8&useSSL=true
     username: ccpqry
