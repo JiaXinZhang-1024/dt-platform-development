@@ -62,7 +62,7 @@ eureka:
 zipkin:
     #base-url: http://localhost:9411 
     discovery-client-enabled: true
-    base-url: http://zipkinserver.com:2001
+    base-url: http://zipkinserver.com
 info:   #追加微服务 信息 
   app.name: user-service
   company.name: www.zjx.com
