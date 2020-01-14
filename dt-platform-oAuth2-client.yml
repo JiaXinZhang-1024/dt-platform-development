@@ -4,6 +4,9 @@ spring:
 
 
 ---
+
+server:
+    port: 3001
 #开发环境配置
 spring:
   profile: dev
@@ -32,8 +35,6 @@ spring:
       maxPoolPreparedStatementPerConnectionSize: 20
       userGlobalDataSourceStat: true
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500    
-server:
-    port: 3001
     
 #Mybatis配置
 mybatis: 
