@@ -48,7 +48,7 @@ mybatis:
 eureka:
   instance:
     hostname: auth2.com 
-    instance-id: auth2-service #集群配置 这里要不同
+    instance-id: auth2Service #集群配置 这里要不同
     prefer-ip-address: true   # 访问路径可以ip 显示
   client:
     service-url:

@@ -50,7 +50,7 @@ mybatis:
 security: 
   oauth2: 
     resource: 
-      id: user-service
+      id: auth2UserService
       prefer-token-info: true
       token-info-uri: http://localhost:3001/oauth/check_token
 eureka: 
