@@ -21,8 +21,6 @@ info:   #追加微服务 信息
   company.name: www.zjx.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$      
-        
-        这
 ---
 spring:
   profiles: test #开发环境
