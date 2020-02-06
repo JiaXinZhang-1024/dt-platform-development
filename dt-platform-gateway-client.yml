@@ -26,7 +26,7 @@ eureka:
     service-url:
       ##defaultZone: http://${eureka.instance.hostname}:7001/eureka/ #将服务注册到Eurka中   ##单机版配置
       ##defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka,http://eurka03.com:8765/eureka      ## 集群配置举例
-      defaultZone: http://eurka01.com:7001/eureka,http://eurka02.com:7002/eureka,http://eurka03.com:7003/eureka      ## 集群配置
+      defaultZone: defaultZone: http://152.136.18.82:30867/eureka,http://152.136.18.82:30608/eureka,http://152.136.18.82:32138/eureka      ## 集群配置
       
 zuul: 
    sensitiveHeaders: 
@@ -53,11 +53,11 @@ security:
     client: 
      client-id: client
      client-secret: secret
-     access-token-uri: http://localhost:3001/oauth/token
-     user-authorization-uri: http://localhost:3001/oauth/authorize
+     access-token-uri: http://152.136.18.82:31008/oauth/token
+     user-authorization-uri: http://152.136.18.82:31008/oauth/authorize
     resource: 
       prefer-token-info: true
-      token-info-uri: http://localhost:3001/oauth/check_token
+      token-info-uri: http://152.136.18.82:31008/oauth/check_token
       
 info:
   app.name: springcloud-study-zuul-gateway
@@ -86,17 +86,17 @@ eureka:
     service-url:
       ##defaultZone: http://${eureka.instance.hostname}:7001/eureka/ #将服务注册到Eurka中   ##单机版配置
       ##defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka,http://eurka03.com:8765/eureka      ## 集群配置举例
-      defaultZone: http://eurka01.com:7001/eureka,http://eurka02.com:7002/eureka,http://eurka03.com:7003/eureka      ## 集群配置
+      defaultZone: http://152.136.18.82:30867/eureka,http://152.136.18.82:30608/eureka,http://152.136.18.82:32138/eureka      ## 集群配置
 security: 
   oauth2: 
     client: 
      client-id: client
      client-secret: secret
-     access-token-uri: http://localhost:3001/oauth/token
-     user-authorization-uri: http://localhost:3001/oauth/authorize
+     access-token-uri: http://152.136.18.82:31008/oauth/token
+     user-authorization-uri: http://152.136.18.82:31008/oauth/authorize
     resource: 
       prefer-token-info: true
-      token-info-uri: http://localhost:3001/oauth/check_token
+      token-info-uri: http://152.136.18.82:31008/oauth/check_token
 zuul: 
    sensitiveHeaders: 
    #公共前缀

@@ -11,7 +11,7 @@ spring:
   zipkin:
     #base-url: http://localhost:9411 
     discovery-client-enabled: true
-    base-url: http://zipkinserver.com:2001/
+    base-url: http://152.136.18.82:30060/
 server:
     port: 9004
 ### Feign 配置
@@ -38,12 +38,12 @@ security:
     client: 
      client-id: client
      client-secret: secret
-     access-token-uri: http://localhost:3001/oauth/token
-     user-authorization-uri: http://localhost:3001/oauth/authorize
+     access-token-uri: http://152.136.18.82:31008/oauth/token
+     user-authorization-uri: http://152.136.18.82:31008/oauth/authorize
     resource: 
       id: user-customer
       prefer-token-info: true
-      token-info-uri: http://localhost:3001/oauth/check_token
+      token-info-uri: http://152.136.18.82:31008/oauth/check_token
 
 eureka:
   instance:
@@ -54,7 +54,7 @@ eureka:
     service-url:
       #defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka,http://eurka03.com:8765/eureka     #集群配置
       #defaultZone: http://eurka01.com:7001/eureka,http://eurka02.com:7002/eureka,http://eurka03.com:7003/eureka
-       defaultZone: http://140.143.217.70:7001,http://118.89.214.209:7002,http://140.143.49.227:7003  #集群配置
+       defaultZone: http://152.136.18.82:30867/eureka,http://152.136.18.82:30608/eureka,http://152.136.18.82:32138/eureka  #集群配置
       #register-with-eureka: false
 zipkin:
     #base-url: http://localhost:9411 

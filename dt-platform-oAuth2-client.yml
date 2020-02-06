@@ -54,7 +54,7 @@ eureka:
     service-url:
       #defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka,http://eurka03.com:8765/eureka     #集群配置
       #defaultZone: http://eurka01.com:7001/eureka
-       defaultZone: http://140.143.217.70:7001,http://118.89.214.209:7002,http://140.143.49.227:7003  #集群配置
+       defaultZone: http://152.136.18.82:30867/eureka,http://152.136.18.82:30608/eureka,http://152.136.18.82:32138/eureka #集群配置
 ##很重要
 security:
   oauth2:
