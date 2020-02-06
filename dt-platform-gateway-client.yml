@@ -1,4 +1,4 @@
-spring:
+﻿spring:
   profile: 
    active: 
      -dev
@@ -26,7 +26,7 @@ eureka:
     service-url:
       ##defaultZone: http://${eureka.instance.hostname}:7001/eureka/ #将服务注册到Eurka中   ##单机版配置
       ##defaultZone: http://eurka01.com:8761/eureka,http://eurka02.com:8764/eureka,http://eurka03.com:8765/eureka      ## 集群配置举例
-      defaultZone: defaultZone: http://152.136.18.82:30867/eureka,http://152.136.18.82:30608/eureka,http://152.136.18.82:32138/eureka      ## 集群配置
+      defaultZone: http://152.136.18.82:30867/eureka,http://152.136.18.82:30608/eureka,http://152.136.18.82:32138/eureka      ## 集群配置
       
 zuul: 
    sensitiveHeaders: 
