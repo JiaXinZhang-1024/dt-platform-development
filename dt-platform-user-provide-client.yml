@@ -13,7 +13,7 @@ spring:
   zipkin:
     #base-url: http://localhost:9411 
     discovery-client-enabled: true
-    base-url: http://zipkinserver.com:2001/
+    base-url: http://152.136.18.82:30060/
   datasource: 
     url: jdbc:mysql://bj-cdb-d7rai9r6.sql.tencentcdb.com:62502/dt-platform-user?characterEncoding=utf8&useSSL=true
     username: ccpqry
@@ -52,7 +52,7 @@ security:
     resource: 
       id: user-service
       prefer-token-info: true
-      token-info-uri: http://localhost:3001/oauth/check_token
+      token-info-uri:  http://152.136.18.82:31008/oauth/check_token
 eureka: 
   instance:
     hostname: localhost 
