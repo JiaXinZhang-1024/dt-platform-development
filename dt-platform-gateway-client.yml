@@ -39,7 +39,7 @@ zuul:
               sensitiveHeaders: 
               path: /myUser/**   #入口名字   path:    多个用逗号分隔 
           userCustomer:  
-              serviceId:  user-customer   #  微服务名字  多个用逗号分隔 
+              serviceId: user-customer   #  微服务名字  多个用逗号分隔 
               sensitiveHeaders: 
               path: /usercustomer/**   #入口名字   path:    多个用逗号分隔 
           auth2:  
